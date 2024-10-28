@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: sans-serif;
+}
+
+.heading{
+    font-size: 32px;
+    font-weight: 800;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.loaderWrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

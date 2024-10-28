@@ -1,0 +1,58 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    background-color: #6f2cf7;
+}
+
+.logo{
+    margin-left: 30px;
+}
+
+.logoColor{
+    color: #1fe0ff;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar ul{
+    margin-right: 30px;
+    list-style: none;
+    font-size: large;
+    display: flex;
+}
+
+.navbar ul li{
+    padding: 3px;
+    margin: 5px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #dcdcfd;
+    font-weight: 600;
+}
+
+.navbar ul li a:hover{
+    color: white;
+}
+
+.logout{
+    color: lightgray;
+    font-weight: 700;
+    cursor: pointer;
+}

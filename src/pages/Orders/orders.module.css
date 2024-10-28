@@ -1,0 +1,69 @@
+.container{
+    width: 90%;
+    height: 100vh;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.orders{
+    padding: 17px;
+}
+
+.order{
+    padding: 17px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 17px;
+    
+}
+
+.orderInfo{
+    margin-bottom: 30px;
+    text-align: left;
+    float: left;
+}
+
+.orderInfo h2 {
+    color: #6f2cf7;
+}
+
+.orderInfo table{
+    margin-top: 30px;
+}
+
+
+
+
+.orderTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orderTable thead{
+    background-color: #f0f0fc;
+    text-align: left;
+}
+
+.orderTable thead th{
+    padding: 17px;
+}
+
+.orderTable tbody{
+    text-align: left;
+}
+
+.orderTable tbody td{
+    padding: 17px;
+}
+
+.orderTable tfoot {
+    background-color: #f0f0fc;
+    font-weight: 600;
+}
+
+
+
+.orderTable tfoot td{
+    padding: 17px;
+}
