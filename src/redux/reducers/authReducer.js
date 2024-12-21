@@ -47,6 +47,9 @@ const userSlice = createSlice({
         setLoading: (state, action) => {
             state.loading = action.payload;
         },
+        setError: (state, action) => {
+            state.error = action.payload;
+        },
         resetUser: (state, action) => {
             state.user = null;
             state.loading = true;

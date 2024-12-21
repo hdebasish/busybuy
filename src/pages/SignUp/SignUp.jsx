@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { GridLoader } from "react-spinners";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { userActions } from "../../redux/reducers/authReducer";
 
 export default function SignUp() {
 
@@ -20,13 +21,14 @@ export default function SignUp() {
             navigate('/');
         }
 
-        if(error){
+        if (error) {
             toast.error(error, {
                 position: "top-center",
             });
+            dispatch(userActions.setError(null));
         }
 
-    },[user, error, navigate]);
+    }, [user, error, navigate, dispatch]);
 
 
     if (loading) {
@@ -40,7 +42,7 @@ export default function SignUp() {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        
+
         const newUser = {
             email,
             password
@@ -61,14 +63,23 @@ export default function SignUp() {
             <div className="heading">Sign Up</div>
             <form onSubmit={handleFormSubmit}>
                 <div className={styles.inputContainer}>
-                    <input type="text" placeholder="Enter Your Name" name="name" />
-                    <input type="email" placeholder="Enter Your Email" name="email" />
-                    <input type="password" placeholder="Enter Your Password" name="password" />
+                    <div>
+                        <label htmlFor="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter Your Name" name="name" />
+                    </div>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Your Email" name="email" />
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Your Password" name="password" />
+                    </div>
                     <button type="submit">Sign Up</button>
                 </div>
             </form>
             <div className={styles.signInLink}>
-                Already have an account? <Link to="/signin">Sign In</Link>
+                Already have an account? <Link to="/signin" style={{ textDecoration: 'none' }}>Sign In</Link>
             </div>
         </div>
     </div>);

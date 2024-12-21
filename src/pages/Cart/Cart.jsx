@@ -108,9 +108,6 @@ export default function Cart() {
         if (cart.length > 0) {
 
             let newOrder = order;
-
-
-
             newOrder = [...newOrder,
             {
                 cart: cart,

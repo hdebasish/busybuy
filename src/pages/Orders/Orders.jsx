@@ -7,11 +7,11 @@ import { useNavigate } from "react-router-dom";
 export default function Orders() {
 
     const navigate = useNavigate();
-    
+
     const { order } = useSelector(orderSelector);
     const { user } = useSelector(userSelector);
 
-    if(!user){
+    if (!user) {
         return navigate('/signin')
     }
 
@@ -23,9 +23,9 @@ export default function Orders() {
                 order &&
                 order.length > 0 &&
                 order.map((item, index) => (
-                    <div className={styles.order} key={index}>
+                    <div className={`${styles.order} ${styles.orderTableWrapper}`} key={index}>
                         <div className={styles.orderInfo}>
-                            <h2>Order #{(index+1).toString().padStart(4, "0")}</h2>
+                            <h2>Order #{(index + 1).toString().padStart(4, "0")}</h2>
                             <table cellSpacing="0" cellPadding="0">
                                 <tr>
                                     <th>Customer Email</th>
@@ -45,37 +45,39 @@ export default function Orders() {
                                 </tr>
                             </table>
                         </div>
-                        <table className={styles.orderTable}>
-                            <thead>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    item.cart &&
-                                    item.cart.length > 0 &&
-                                    item.cart.map((product, index) => (
-                                        <tr key={product.id}>
-                                            <td>{product.name}</td>
-                                            <td>₹{parseFloat(product.price).toFixed(2)}</td>
-                                            <td>{product.quantity}</td>
-                                            <td>₹{parseFloat(product.price*product.quantity).toFixed(2)}</td>
-                                        </tr>
-                                    ))
-                                }
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td colSpan="3" style={{ textAlign: 'end' }}>Total</td>
-                                    <td>₹{parseFloat(item.total).toFixed(2)}</td>
-                                </tr>
-                            </tfoot>
-                        </table>
+                        <div>
+                            <table className={styles.orderTable}>
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        item.cart &&
+                                        item.cart.length > 0 &&
+                                        item.cart.map((product, index) => (
+                                            <tr key={product.id}>
+                                                <td>{product.name}</td>
+                                                <td>₹{parseFloat(product.price).toFixed(2)}</td>
+                                                <td>{product.quantity}</td>
+                                                <td>₹{parseFloat(product.price * product.quantity).toFixed(2)}</td>
+                                            </tr>
+                                        ))
+                                    }
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colSpan="3" style={{ textAlign: 'end' }}>Total</td>
+                                        <td>₹{parseFloat(item.total).toFixed(2)}</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
 
+                        </div>
                     </div>
                 ))
             }

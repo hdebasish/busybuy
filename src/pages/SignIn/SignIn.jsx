@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { GridLoader } from "react-spinners";
 import { signInUser, userSelector } from "../../redux/reducers/authReducer";
 import { useDispatch, useSelector } from "react-redux";
-
+import { userActions } from "../../redux/reducers/authReducer";
 
 export default function SignIn() {
 
@@ -19,13 +19,14 @@ export default function SignIn() {
             navigate('/');
         }
 
-        if(error){
+        if (error) {
             toast.error(error, {
                 position: "top-center",
             });
+            dispatch(userActions.setError(null));
         }
 
-    },[user, error, navigate]);
+    }, [user, error, navigate, dispatch]);
 
 
     if (loading) {
@@ -40,7 +41,7 @@ export default function SignIn() {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        
+
         const currentUser = {
             email,
             password
@@ -61,13 +62,19 @@ export default function SignIn() {
             <div className="heading">Sign In</div>
             <form onSubmit={handleFormSubmit}>
                 <div className={styles.inputContainer}>
-                    <input type="email" placeholder="Enter Your Email" name="email" />
-                    <input type="password" placeholder="Enter Your Password" name="password" />
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Your Email" name="email" />
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Your Password" name="password" />
+                    </div>
                     <button type="submit">Sign In</button>
                 </div>
             </form>
             <div className={styles.signUpLink}>
-                Don't have an account? <Link to="/signup">Sign Up</Link>
+                Don't have an account? <Link to="/signup" style={{ textDecoration: 'none' }}>Sign Up</Link>
             </div>
 
         </div>

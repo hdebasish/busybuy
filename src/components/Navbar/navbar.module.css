@@ -1,12 +1,11 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     height: 100vh;
-    width: 100vw;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,45 +13,95 @@
     background-color: #6f2cf7;
 }
 
-.logo{
+.logo {
     margin-left: 30px;
 }
 
-.logoColor{
+.logoColor {
     color: #1fe0ff;
 }
 
-.logo a{
+.logo a {
     text-decoration: none;
     font-size: xx-large;
     font-weight: 600;
     color: white;
 }
 
-.navbar ul{
+.list1 {
     margin-right: 30px;
     list-style: none;
     font-size: large;
     display: flex;
 }
 
-.navbar ul li{
+.list2 {
+    list-style: none;
+}
+
+.list2 li {
+    padding: 10px;
+    margin-left: 5px;
+    font-size: 30px;
+}
+
+.list2 li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.list1 li {
     padding: 3px;
     margin: 5px;
 }
 
-.navbar ul li a{
+.list1 li a {
     text-decoration: none;
-    color: #dcdcfd;
+    color: white;
     font-weight: 600;
 }
 
-.navbar ul li a:hover{
-    color: white;
+.list1 li a:hover {
+    color: #c9f8ff;
 }
 
-.logout{
-    color: lightgray;
+.logout {
+    color: white;
     font-weight: 700;
     cursor: pointer;
+}
+
+.logout:hover {
+    color: pink;
+}
+
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menuItems {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #1fe0ff;
+    z-index: 10;
+}
+
+.menuClose {
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .list1 {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
 }

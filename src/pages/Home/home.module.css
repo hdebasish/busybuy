@@ -175,3 +175,15 @@
 .addToCart:active{
     background-color: #6f2cf7;
 }
+
+@media only screen and (max-width: 600px) {
+    .productContainer{
+        justify-content: center;
+    }
+
+    .product img {
+        width: 350PX;
+        height: 350px;
+    }
+
+}

@@ -16,9 +16,7 @@ export default function Home() {
     const { cart } = useSelector(cartSelector);
     const { user } = useSelector(userSelector);
     const dispatch = useDispatch();
-
     const navigate = useNavigate();
-
     const [products, setProduct] = useState([]);
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
@@ -41,9 +39,7 @@ export default function Home() {
                 setPrice(max);
             });
         }
-
         getData();
-
     }, []);
 
     useEffect(() => {
@@ -132,7 +128,7 @@ export default function Home() {
 
 
     return (<div className={styles.container}>
-        <div className={styles.productWrapper}>
+        <div className={`${styles.productWrapper} wrap`}>
             <div className={styles.filterWrapper}>
 
                 <div className={styles.searchWrapper}>
