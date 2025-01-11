@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# BusyBuy (eCommerce App)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BusyBuy is a feature-rich eCommerce application designed to deliver a seamless online shopping experience. Developed using modern web technologies like React Hooks, Redux, and Firebase, BusyBuy allows users to browse products, manage their cart, and complete purchases efficiently. The app's real-time cart management, user-friendly interface, and secure data storage make it an ideal solution for exploring and buying your favorite products online.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🛒 **Browse Products**: Explore a variety of products with detailed descriptions and images.
+- 🔍 **Search**: Quickly find products using the search functionality.
+- 📂 **Filter by Category**: Narrow down product options based on specific categories.
+- 💲 **Filter by Price**: Adjust price ranges to view products within your budget.
+- 💳 **Cart Management**: Add, remove, and update products in your shopping cart in real time.
+- 🛍 **Purchase Completion**: Smooth checkout process for completing transactions.
+- 📜 **Orders Section**: View past orders and their details for easy reference and reordering.
+- 🔗 **Dynamic Navigation**: Enhanced navigation using React Router DOM.
+- 🔥 **Real-Time Updates**: Secure data handling and updates with Firebase.
+- 📱 **Responsive Design**: Optimized for use on desktops, laptops, and mobile devices.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React Hooks**: For efficient state and lifecycle management.
+- **React Redux**: To handle global state management seamlessly.
+- **React Router DOM**: For smooth navigation across app pages.
+- **Firebase**: Used for secure storage of user data, product inventory, and transaction details.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+[BusyBuy Demo](https://busybuy-production.up.railway.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Run Locally
 
-### `npm run build`
+Clone the project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  git clone https://github.com/hdebasish/busybuy
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Go to the project directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  cd busybuy
+```
 
-### `npm run eject`
+Install dependencies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Start the development server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Screenshots
 
-## Learn More
+![Homepage](https://raw.githubusercontent.com/hdebasish/busybuy/master/screenshots/Home.png)
+![Shopping Cart](https://raw.githubusercontent.com/hdebasish/busybuy/master/screenshots/Cart.png)
+![Orders](https://raw.githubusercontent.com/hdebasish/busybuy/master/screenshots/Orders.png)
+![Sign In](https://raw.githubusercontent.com/hdebasish/busybuy/master/screenshots/SignIn.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React Redux**: [Redux Documentation](https://redux.js.org/)
+- **React Router DOM**: [React Router Documentation](https://reactrouter.com/)
+- **Firebase**: [Firebase Documentation](https://firebase.google.com/docs)
 
-### Code Splitting
+## Feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+If you have any feedback, feel free to reach out to me at [hdebasish@gmail.com](mailto:hdebasish@gmail.com).
 
-### Analyzing the Bundle Size
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Debasish Halder**
